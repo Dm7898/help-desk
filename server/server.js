@@ -15,7 +15,7 @@ const app = express();
 // app.use(cors()); // Enable CORS
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://help-desk-frontend.onrender.com",
+  "https://help-desk-1.onrender.com",
 ];
 
 app.use(
