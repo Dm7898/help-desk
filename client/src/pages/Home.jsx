@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       <div className="flex-1">
-        <div className="min-h-screen bg-custom-img bg-cover shadow-md lg:shadow-none pt-4 flex lg:items-center justify-center">
+        <div className="min-h-screen bg-[url('/pattern.webp')] bg-cover shadow-md lg:shadow-none pt-4 flex lg:items-center justify-center">
           <div className="p-2 w-full">
             <h1 className="text-3xl lg:text-6xl font-bold text-center mb-6 lg:mb-8 text-h1">
               Welcome to Help Desk
