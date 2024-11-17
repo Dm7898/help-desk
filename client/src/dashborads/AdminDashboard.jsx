@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TicketList from "./TicketList";
-import UserList from "./UserList";
+import TicketList from "../components/TicketList";
+import UserList from "../components/UserList";
 
 function AdminDashboard() {
   const [ticketCount, setTicketCount] = useState(0);
