@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
 import PrivateRoute from "./PrivateRoute";
-import LoginPage from "./pages/Login";
-import RegisterPage from "./pages/Register";
-import Home from "./pages/Home";
+import LoginPage from "./components/Login";
+import RegisterPage from "./components/Register";
+import Home from "./components/Home";
 import CustomerDashboard from "./components/CustomerDashboard";
 import AdminDashboard from "./components/AdminDashboard";
-import AgentDashboard from "./dashborads/AgentDashboard";
-import Tickets from "./pages/Tickets";
-import Customers from "./pages/Customers";
+import AgentDashboard from "./components/AgentDashboard";
+import Tickets from "./components/Tickets";
+import Customers from "./components/Customers";
 import Layout from "./components/Layout";
 
 const App = () => (
