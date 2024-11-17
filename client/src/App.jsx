@@ -4,12 +4,12 @@ import PrivateRoute from "./PrivateRoute";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import Home from "./pages/Home";
-import CustomerDashboard from "./dashborads/CustomerDashboard";
-import AdminDashboard from "./dashborads/AdminDashboard";
+import CustomerDashboard from "./components/CustomerDashboard";
+import AdminDashboard from "./components/AdminDashboard";
 import AgentDashboard from "./dashborads/AgentDashboard";
 import Tickets from "./pages/Tickets";
 import Customers from "./pages/Customers";
-import Layout from "./layout/Layout";
+import Layout from "./components/Layout";
 
 const App = () => (
   <AuthProvider>
