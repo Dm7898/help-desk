@@ -12,7 +12,6 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 
-// app.use(cors()); // Enable CORS
 const allowedOrigins = [
   "http://localhost:5173",
   "https://help-desk-1.onrender.com",
@@ -20,12 +19,17 @@ const allowedOrigins = [
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true); // Allow requests
+      } else {
+        callback(new Error("Not allowed by CORS")); // Block requests
+      }
+    },
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
+    credentials: true, // Allow cookies and headers like Authorization
   })
 );
-
 app.use(express.json());
 
 // MongoDB connection
