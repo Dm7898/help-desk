@@ -1,4 +1,4 @@
-import TicketList from "../components/TicketList";
+import TicketList from "./TicketList";
 function AgentDashboard() {
   return (
     <div>
