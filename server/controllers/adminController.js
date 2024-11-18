@@ -5,7 +5,7 @@ import User from "../models/User.js";
 export const createUser = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
-    console.log(name, email, password, role);
+    //console.log(name, email, password, role);
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
