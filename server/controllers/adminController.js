@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
+import Ticket from "../models/Ticket.js";
 
 export const createUser = async (req, res) => {
   try {
@@ -88,8 +89,10 @@ export const deleteUser = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
+    await Ticket.deleteMany({ userId }); // Assumes tickets have a `userId` field.
 
-    res.status(200).json({ message: "User deleted successfully" });
+    res.status(200).json({ message: "User and associated tickets deleted successfully" });
+    //res.status(200).json({ message: "User deleted successfully" });
   } catch (error) {
     res
       .status(500)
